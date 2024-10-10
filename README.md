@@ -11,8 +11,7 @@ This repository contains a Python Flask-based service that writes objects to a f
 - [AWS EC2 Setup](#aws-ec2-setup)
 - [API Endpoints](#api-endpoints)
 - [S3 Bucket](#s3-bucket)
-- [Running the Service](#running-the-service)
-- [Contributing](#contributing)
+- [Video Link](#video-link)
 
 ## Features
 
@@ -73,3 +72,7 @@ Before you begin, make sure you have the following installed on your machine, so
 ![alt text](screenshot/Picture4.png)
 ![alt text](screenshot/Picture5.png)
 ![alt text](screenshot/Picture6.png)
+
+## Video Link
+
+https://drive.google.com/file/d/1sctJkfgTerBF_ZpODodq78qXSY3vutfO/view?usp=sharing
