@@ -1,5 +1,5 @@
 # On2N
-# Flow digram for deploy of service
+# Flow diagram for deploy of service
 ![alt text](screenshot/q1.png)
 # Python Object Writing Service
 
