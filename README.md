@@ -63,7 +63,6 @@ Before you begin, make sure you have the following installed on your machine, so
 ![alt text](screenshot/t6.png)
 - **terraform destroy** : Destroys all resources defined in your Terraform configuration, effectively tearing down the infrastructure provisioned
 
-![alt text](screenshot/t6.png)
 ![alt text](screenshot/t7.png)
 
 ## API Endpoints Response
@@ -72,6 +71,6 @@ Before you begin, make sure you have the following installed on your machine, so
 ![alt text](screenshot/Picture3.png)
 
 ##S3 Bucket
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
+![alt text](screenshot/Picture4.png)
+![alt text](screenshot/Picture5.png)
+![alt text](screenshot/Picture6.png)
