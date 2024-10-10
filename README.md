@@ -1,4 +1,6 @@
 # On2N
+# Flow digram for deploy of service
+![alt text](screenshot/1_Do1Wl_dm7w-wNGUiTQBvuw.png)
 # Python Object Writing Service
 
 This repository contains a Python Flask-based service that writes objects to a file and is hosted on an AWS EC2 instance. The infrastructure for the EC2 instance is provisioned using Terraform.
