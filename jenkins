@@ -1,0 +1,68 @@
+pipeline {
+    agent any
+    parameters {
+        choice(name: 'ACTION', choices: ['init', 'apply', 'destroy'], description: 'Select Terraform Action')
+    }
+
+    stages {
+        stage('Git Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/kaushik379/One2N.git'
+                sh 'ls -al'
+            }
+        }
+
+        stage('Inject AWS Credentials') {
+            steps {
+                withCredentials([string(credentialsId: 'ACCESSKEYID', variable: 'ACCESS_KEY_ENV'),
+                                 string(credentialsId: 'AWSSECRETACCESSKEY', variable: 'AWSSECRET_ACCESS_KEY')]) {
+                    sh '''
+                    sed -i "s|ACCESSKEY|${ACCESS_KEY_ENV}|g" terraform/main.tf
+                    sed -i "s|SECRETKEY|${AWSSECRET_ACCESS_KEY}|g" terraform/main.tf
+                    '''
+                }
+            }
+        }
+
+        stage('Terraform Init') {
+            steps {
+                dir('terraform') {
+                    sh 'terraform init'
+                }
+            }
+        }
+
+        stage('Terraform Plan') {
+            when {
+                expression { params.ACTION == 'apply' }
+            }
+            steps {
+                dir('terraform') {
+                    sh 'terraform plan -out=tfplan'
+                }
+            }
+        }
+
+        stage('Terraform Apply') {
+            when {
+                expression { params.ACTION == 'apply' }
+            }
+            steps {
+                dir('terraform') {
+                    sh 'terraform apply -auto-approve tfplan'
+                }
+            }
+        }
+
+        stage('Terraform Destroy') {
+            when {
+                expression { params.ACTION == 'destroy' }
+            }
+            steps {
+                dir('terraform') {
+                    sh 'terraform destroy -auto-approve'
+                }
+            }
+        }
+    }
+}
