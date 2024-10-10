@@ -44,31 +44,32 @@ Before you begin, make sure you have the following installed on your machine, so
 
 ## Integrate Terraform with Jenkins
 - **Plugin** Install terraform plugin in jenkins, as i have already install so it is not showing here
-![alt text](image.png)
+![alt text](screenshot/t1.png)
 
 - **configure** Add the path of terraform in terraform configuration
-![alt text](image-1.png)
+![alt text](screenshot/t2.png)
 
 ## AWS EC2 Setup
-- This service is hosted on an EC2 instance, which is created using Terraform.![alt text](image-2.png)
+- This service is hosted on an EC2 instance, which is created using Terraform.![alt text](screenshot/t3.png)
 - This is the file structure of terraform.
 1. **Deployment steps**: This things are done using jenkins.
 - **terraform init** : Initialize Terraform
-![alt text](image-3.png)
+![alt text](screenshot/t4.png)
 
 - **terraform plan** : Generates an execution plan showing the changes to infrastructure resources that Terraform will make based on your configuration files.
 - **terraform apply** : Applies the changes described in the Terraform execution plan to provision or modify infrastructure as defined in your configuration.
-![alt text](image-4.png)
+![alt text](screenshot/t5.png)
 
-![alt text](image-5.png)
+![alt text](screenshot/t6.png)
 - **terraform destroy** : Destroys all resources defined in your Terraform configuration, effectively tearing down the infrastructure provisioned
 
-![alt text](image-6.png)
+![alt text](screenshot/t6.png)
+![alt text](screenshot/t7.png)
 
 ## API Endpoints Response
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
+![alt text](screenshot/Picture1.png)
+![alt text](screenshot/Picture2.png)
+![alt text](screenshot/Picture3.png)
 
 ##S3 Bucket
 ![alt text](image-10.png)
