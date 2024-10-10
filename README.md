@@ -35,8 +35,7 @@ Before you begin, make sure you have the following installed on your machine, so
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git branch: 'main', url: 'https://github.com/kaushik379/One2N.git'
 
    pip install flask boto3
 
