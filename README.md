@@ -70,7 +70,7 @@ Before you begin, make sure you have the following installed on your machine, so
 ![alt text](screenshot/Picture2.png)
 ![alt text](screenshot/Picture3.png)
 
-##S3 Bucket
+## S3 Bucket
 ![alt text](screenshot/Picture4.png)
 ![alt text](screenshot/Picture5.png)
 ![alt text](screenshot/Picture6.png)
